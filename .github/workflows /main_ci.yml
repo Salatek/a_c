@@ -2,7 +2,7 @@ name: CI to Docker Hub
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
 
@@ -38,7 +38,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: devbase/pipeline_example:latest
+          tags: Salatek/a_c:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
       -
